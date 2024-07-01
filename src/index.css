@@ -1,13 +1,91 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+
+  @apply font-urbanist
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+h1{
+
+  @apply text-[64px] font-[600]
+
+}
+
+h2{
+
+  @apply text-[48px] font-[600]
+
+}
+
+h3{
+
+  @apply text-[40px] font-[600]
+
+}
+h4{
+
+  @apply text-[36px] font-[600]
+
+}
+h5{
+
+  @apply text-[32px] font-[600]
+
+}
+h6{
+
+  @apply text-['24px'] font-[600]
+
+}
+p{
+
+  @apply text-['16px'] font-[400]
+
+}
+
+.p2{
+
+  @apply text-['18px'] font-[400]
+
+}
+
+.p3{
+
+  @apply text-['20px'] font-[400]
+
+}
+
+.subtitle{
+
+
+  @apply  font-bold uppercase text-[13px] 
+
+
+}
+
+.nav-link{
+
+  @apply text-[16px] font-[600]
+
+}
+
+.btn{
+
+  @apply text-white font-[600] bg-primary focus:ring-2 ring-primary/30 px-4 py-3 rounded-md
+
+}
+.btn-outline{
+
+  @apply  font-[600] border border-primary focus:ring-2 ring-primary/30 px-4 py-3 rounded-full
+
+}
+
+.input{
+
+   @apply p-4 outline-none border border-black/70 w-full rounded-md
+
 }
