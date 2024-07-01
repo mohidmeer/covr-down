@@ -7,6 +7,7 @@ import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
 import ForgotPassword from './pages/auth/ForgotPassword';
 import VerifyCode from './pages/auth/VerifyCode';
+import SetNewPassword from './pages/auth/SetNewPassword';
 
 function App() {
   return (
@@ -23,7 +24,9 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/verify-code" element={<VerifyCode/>} />
+          <Route path="/set-new-password" element={<SetNewPassword/>} />
         </Route>
+        
       </Routes>
     </Router>
   );
