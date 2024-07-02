@@ -1,12 +1,12 @@
 import React from 'react'
 import ServicesLayout from '../../layouts/ServicesLayout'
 
-const Traffic = () => {
+const RegionalAwarness = () => {
   return (
-    <ServicesLayout title={'Traffic'}>
+    <ServicesLayout title={'Regional Awareness'} >
 
     </ServicesLayout>
   )
 }
 
-export default Traffic
+export default RegionalAwarness

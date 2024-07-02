@@ -19,6 +19,7 @@ import GeoFencing from './pages/services/GeoFencing';
 import News from './pages/services/News';
 import Events from './pages/services/Events';
 import Alerts from './pages/services/Alerts';
+import Notifications from './pages/services/Notifications';
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
           <Route path="/manager/news" element={<News/>} />
           <Route path="/manager/events" element={<Events/>} />
           <Route path="/manager/alerts" element={<Alerts/>} />
+          <Route path="/manager/notifications" element={<Notifications/>} />
         </Route>
 
 

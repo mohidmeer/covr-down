@@ -1,12 +1,12 @@
 import React from 'react'
 import ServicesLayout from '../../layouts/ServicesLayout'
 
-const Traffic = () => {
+const Passwords = () => {
   return (
-    <ServicesLayout title={'Traffic'}>
+    <ServicesLayout title={'Passwords'}>
 
     </ServicesLayout>
   )
 }
 
-export default Traffic
+export default Passwords
