@@ -1,8 +1,11 @@
 import React from 'react'
+import ServicesLayout from '../../layouts/ServicesLayout'
 
 const DeleteAccount = () => {
   return (
-    <div>DeleteAccount</div>
+    <ServicesLayout title={'Delete Account'}>
+
+    </ServicesLayout>
   )
 }
 

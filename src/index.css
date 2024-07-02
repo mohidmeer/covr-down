@@ -78,6 +78,11 @@ p{
   @apply text-white font-[600] bg-primary focus:ring-2 ring-primary/30 px-4 py-3 rounded-md
 
 }
+.btn-sm{
+
+  @apply text-white font-[400] bg-primary focus:ring-2 ring-primary/30 px-2 py-1 rounded-md
+
+}
 .btn-outline{
 
   @apply  font-[600] border border-primary focus:ring-2 ring-primary/30 px-4 py-3 rounded-full
@@ -86,6 +91,11 @@ p{
 .btn-outline-saqure{
 
   @apply  font-[600] border border-primary focus:ring-2 ring-primary/30 px-4 py-3 rounded-md
+
+}
+.btn-outline-saqure-sm{
+
+  @apply  font-[400] border border-primary focus:ring-2 ring-primary/30 px-2 py-1 rounded-md
 
 }
 

@@ -3,7 +3,7 @@ import ServicesLayout from '../../layouts/ServicesLayout'
 
 const SocialMedia = () => {
   return (
-    <ServicesLayout title={'Social Media'}>
+    <ServicesLayout title={'Social Media '}>
 
     </ServicesLayout>
   )

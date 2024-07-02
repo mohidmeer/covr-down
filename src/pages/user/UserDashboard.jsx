@@ -1,12 +1,12 @@
 import React from 'react'
 import ServicesLayout from '../../layouts/ServicesLayout'
 
-const Dashboard = () => {
+const UserDashboard = () => {
   return (
-    <ServicesLayout title={'Manager Dashboard '}>
+    <ServicesLayout title={'User Dashboard '}>
 
     </ServicesLayout>
   )
 }
 
-export default Dashboard
+export default UserDashboard
