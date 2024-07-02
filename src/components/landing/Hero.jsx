@@ -7,13 +7,13 @@ import heroArt from '../../assets/img/heroart.png'
 
 const Hero = () => {
   return (
-    <div className='flex items-center h-[80vh] border container mx-auto p-8 relative'>        
+    <div className='flex items-center h-[80vh] border container mx-auto p-8 relative overflow-hidden'>        
         
         <img src={star} alt='star' className='absolute top-2 left-72 ' />
         <img src={star} alt='star' className='absolute bottom-10 ' />
 
         <div className='flex-1 flex flex-col  gap-1'>
-            <h1 className='mt-52 '>
+            <h1 className='mt-52 max-h-fit overflow-hidden '>
                 Make the best Management decisions
             </h1>
             <p>

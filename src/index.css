@@ -83,9 +83,28 @@ p{
   @apply  font-[600] border border-primary focus:ring-2 ring-primary/30 px-4 py-3 rounded-full
 
 }
+.btn-outline-saqure{
+
+  @apply  font-[600] border border-primary focus:ring-2 ring-primary/30 px-4 py-3 rounded-md
+
+}
 
 .input{
 
    @apply p-4 outline-none border border-black/70 w-full rounded-md
 
 }
+
+.sidebar-active {
+
+
+  @apply text-white !bg-primary transition-all duration-300
+}
+
+
+
+.row-shadow{
+  box-shadow: 0px 0px 0px 3px rgba(0,0,0,1);
+}
+
+
