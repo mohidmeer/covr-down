@@ -74,7 +74,7 @@ const ManagerLayout = () => {
             { name: 'Regional Awareness', href: '/manager/regional-awareness', icon: PiMapPinAreaThin },
             { name: 'Passwords', href: '/manager/passwords', icon: PiLockThin },
             { name: 'Payment Methods', href: '/manager/payment-methods', icon: PiCreditCardThin },
-            { name: 'Payment Plan', href: '/manager/payment-plan', icon: PiCurrencyDollarSimpleThin },
+            { name: 'Subscription', href: '/manager/payment-plan', icon: PiCurrencyDollarSimpleThin },
             { name: 'Delete Account', href: '/manager/delete-account', icon: PiTrashThin },
            
           ]

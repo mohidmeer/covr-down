@@ -89,7 +89,7 @@ function ChildMenu({ subMenu }) {
           <p  key={z} className={`mt-2  flex justify-between items-center w-full rounded-md   `}>
             <NavLink to={i.href} 
             className={({ isActive }) =>
-              `flex items-center gap-2 whitespace-nowrap border-l border-transparent  pl-2 ${isActive ? 'border-primary text-primary' : ''}`
+              `flex items-center gap-2 whitespace-nowrap border-l border-transparent  pl-2 ${isActive ? '!border-primary text-primary' : ''}`
             }
             
             >

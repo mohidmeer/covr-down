@@ -52,7 +52,7 @@ const UserLayout = () => {
             { name: 'Regional Awareness', href: '/user/regional-awareness', icon: PiMapPinAreaThin },
             { name: 'Passwords', href: '/user/passwords', icon: PiLockThin },
             { name: 'Payment Methods', href: '/user/payment-methods', icon: PiCreditCardThin },
-            { name: 'Payment Plan', href: '/user/payment-plan', icon: PiCurrencyDollarSimpleThin },
+            { name: 'Subscription ', href: '/user/payment-plan', icon: PiCurrencyDollarSimpleThin },
             { name: 'Delete Account', href: '/user/delete-account', icon: PiTrashThin },
           ]
     

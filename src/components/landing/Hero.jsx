@@ -7,7 +7,8 @@ import heroArt from '../../assets/img/heroart.png'
 
 const Hero = () => {
   return (
-    <div className='flex items-center h-[80vh] border container mx-auto p-8 relative overflow-hidden'>        
+    <div className='flex items-center h-[80vh] container mx-auto p-8 relative overflow-hidden '>    
+    <div className='bg-gradient-to-r from-primary via-primary to-yellow-600  p-10 rounded-full h-32 w-32 absolute top-28 left-72   -z-10 blur-3xl' />    
         
         <img src={star} alt='star' className='absolute top-2 left-72 ' />
         <img src={star} alt='star' className='absolute bottom-10 ' />

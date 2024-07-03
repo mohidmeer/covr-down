@@ -5,12 +5,15 @@ import serviceImg3 from '../../assets/img/service3.png'
 import serviceImg4 from '../../assets/img/service4.png'
 import map from '../../assets/img/map.png'
 import why from '../../assets/img/why.png'
+import quality1 from '../../assets/img/quality.png'
+import quality from '../../assets/img/quality2.png'
 
 import { Link } from 'react-router-dom'
 
 const Services = () => {
     return (
-        <div className='max-w-6xl  mx-auto flex flex-col gap-20'>
+        <div className='max-w-6xl  mx-auto flex flex-col gap-20 relative'>
+            <div className='gradient-1  p-10 rounded-full h-32 w-32 absolute top-10 -z-10 blur-3xl ' />
             <div className='max-w-4xl mx-auto flex flex-col gap-8 text-center'>
                 <p className='subtitle uppercase'>
                     Our Services
@@ -82,8 +85,9 @@ const Services = () => {
 
             </div>
 
-            <div className='flex gap-2'>
-                <div className='flex-col gap-6 flex flex-1 justify-center'>
+            <div className='flex gap-2 relative'>
+                <div className='bg-gradient-to-r from-primary via-primary to-yellow-600  p-10 rounded-full h-32 w-32 absolute top-0 -z-10 blur-3xl' />
+                <div className='flex-col gap-6 flex flex-1 justify-center  '>
                     <h4 className='leading-tight '>
                         Organize remote team fast & easily with our mobile app.
                     </h4>
@@ -147,8 +151,10 @@ const Services = () => {
                     </Link>
 
                 </div>
-                <div className='flex-1'>
+                <div className='flex-1 relative'>
                     <img src={why} alt='' />
+                    <img className='absolute bottom-0 -left-20 ' src={quality} alt='' />
+                    <img src={quality1} className='absolute top-[300px] -right-32 ' alt='' />
 
                 </div>
 

@@ -4,7 +4,7 @@ import news from '../../assets/img/news.png'
 
 const News = () => {
   return (
-    <div className='bg-gray-200 py-10'>
+    <div className='bg-gray-100 pt-10 pb-20'>
       <div className='flex flex-col gap-2 text-center p-4 '>
         <h2>News That Helps</h2>
         <p>With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</p>
