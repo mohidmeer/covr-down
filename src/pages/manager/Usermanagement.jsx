@@ -47,13 +47,13 @@ const Usermanagement = () => {
         }
       ];
   return (
-    <div className='h-screen flex flex-col gap-4 w-full'>
-            <div className='flex justify-between  overflow-hidden items-center   '>
+    <div className='h-screen flex flex-col gap-4 w-full overflow-hidden'>
+            <div className='flex sm:flex-row flex-col justify-between  overflow-hidden items-center   '>
                 <h5>Staff</h5>
-                <div className='w-1/3 ml-auto'>
+                <div className='md:w-1/3 md:ml-auto w-full'>
                     <Input name={'Search'} placeholder="Search for user or staff" />
                 </div>
-                <button className='btn '>
+                <button className='btn w-full md:w-fit  '>
                     Add User
                 </button>
             </div>

@@ -3,6 +3,7 @@ import { NavLink, useLocation } from 'react-router-dom'
 import Logo from './common/logo'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { FaChevronDown } from "react-icons/fa6";
+import { MdClose, MdMenu } from 'react-icons/md';
 
 
 
@@ -10,31 +11,37 @@ import { FaChevronDown } from "react-icons/fa6";
 const SideBar = ({ Menu }) => {
   const [activeMenu, setActiveMenu] = useState(null); // State to track active menu item
 
-  // Function to handle menu item click
+
   const handleMenuItemClick = (index) => {
     setActiveMenu(index === activeMenu ? null : index); // Toggle active menu state
   };
 
-  return (
-    <aside className='rounded-xl min-w-[300px] h-full border p-2 sticky top-4 self-start'>
-      <div className='flex justify-center items-center w-full'>
-        <Logo />
-      </div>
 
-      <ul className='mt-10 w-full'>
-        {Menu.map((item, index) => (
-          <li key={index} onClick={() => handleMenuItemClick(index)} className=''>
-            <ParentMenu
-              name={item.name}
-              href={item.href}
-              icon={item.icon}
-              subMenu={item.subMenu}
-              isActive={index === activeMenu} // Pass isActive prop based on active state
-            />
-          </li>
-        ))}
-      </ul>
-    </aside>
+  const mobileMenuRoutes = Menu.flatMap(item => item.subMenu);
+
+  return (
+    <>
+      <MobileScreens menu={mobileMenuRoutes} />
+      <aside className='hidden lg:block rounded-xl md:min-h-[280px] lg:min-w-[300px] h-full border p-2 sticky top-4 self-start'>
+        <div className='flex justify-center items-center  sm:w-full w-[150px]'>
+          <Logo />
+        </div>
+
+        <ul className='mt-10 w-full'>
+          {Menu.map((item, index) => (
+            <li key={index} onClick={() => handleMenuItemClick(index)} className=''>
+              <ParentMenu
+                name={item.name}
+                href={item.href}
+                icon={item.icon}
+                subMenu={item.subMenu}
+                isActive={index === activeMenu} // Pass isActive prop based on active state
+              />
+            </li>
+          ))}
+        </ul>
+      </aside>
+    </>
   );
 };
 
@@ -47,7 +54,7 @@ function ParentMenu({ name, subMenu, href, icon: Icon }) {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-   };
+  };
 
   return (
     <Disclosure>
@@ -65,9 +72,9 @@ function ParentMenu({ name, subMenu, href, icon: Icon }) {
           </DisclosureButton>
 
           {/* {isOpen && ( */}
-            <div className='ml-4 my-4'>
-              <ChildMenu subMenu={subMenu} />
-            </div>
+          <div className='ml-4 my-4'>
+            <ChildMenu subMenu={subMenu} />
+          </div>
           {/* )} */}
         </>
       )}
@@ -78,7 +85,6 @@ function ParentMenu({ name, subMenu, href, icon: Icon }) {
 
 function ChildMenu({ subMenu }) {
 
-  const location = useLocation();
 
   return (
     <DisclosurePanel className=" flex flex-col gap-4 font-light border-l">
@@ -86,15 +92,15 @@ function ChildMenu({ subMenu }) {
       {
         subMenu.map((i, z) => (
 
-          <p  key={z} className={`mt-2  flex justify-between items-center w-full rounded-md   `}>
-            <NavLink to={i.href} 
-            className={({ isActive }) =>
-              `flex items-center gap-2 whitespace-nowrap border-l border-transparent  pl-2 ${isActive ? '!border-primary text-primary' : ''}`
-            }
-            
+          <p key={z} className={`mt-2  flex justify-between items-center w-full rounded-md   `}>
+            <NavLink to={i.href}
+              className={({ isActive }) =>
+                `flex items-center gap-2 whitespace-nowrap border-l border-transparent  pl-2 ${isActive ? '!border-primary text-primary' : ''}`
+              }
+
             >
               <i.icon size={32} />
-                {i.name}
+              {i.name}
             </NavLink>
 
           </p>
@@ -106,4 +112,59 @@ function ChildMenu({ subMenu }) {
 
     </DisclosurePanel>
   )
+}
+
+
+
+function MobileScreens({ menu }) {
+
+  // const [open, setOpen] = useState(false);
+
+  return (
+
+
+    <>
+
+
+
+
+      <aside className='block lg:hidden rounded-xl px-4  border p-2 sticky top-30 self-start overflow-hidden bg-white z-10'>
+        {/* <div>
+
+          {
+
+            open ?
+
+              <MdClose size={28} className="" onClick={() => { setOpen(!open) }} />
+              :
+              <MdMenu size={28} className="" onClick={() => { setOpen(!open) }} />
+
+          }
+        </div> */}
+
+        <ul className={`flex flex-col gap-4 h-full overflow-hidden transition-all`}>
+          {
+            menu.map((i) => (
+              <li key={i.href}>
+                <NavLink to={i.href}
+                  className={({ isActive }) =>
+                    `flex items-center gap-2 whitespace-nowrap rounded-md  p-2 ${isActive ? '!bg-primary text-white' : ''}`
+                  }
+
+                >
+                  <i.icon size={32} />
+                </NavLink>
+
+              </li>
+            ))
+          }
+        </ul>
+
+      </aside></>
+
+
+
+  )
+
+
 }

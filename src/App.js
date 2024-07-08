@@ -12,7 +12,7 @@ import ManagerLayout from './layouts/ManagerLayout';
 import Dashboard from './pages/manager/Dashboard';
 import ContentManagement from './pages/manager/ContentManagement';
 import Usermanagement from './pages/manager/Usermanagement';
-import Feed from './pages/manager/Feed';
+import Feed from './pages/services/Feed';
 import Wheather from './pages/services/Wheather';
 import Traffic from './pages/services/Traffic';
 import GeoFencing from './pages/services/GeoFencing';

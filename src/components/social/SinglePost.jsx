@@ -8,7 +8,7 @@ import { CiSaveDown2 } from "react-icons/ci";
 import Input from '../ui/Input';
 const SinglePost = () => {
     return (
-        <div className="mt-5  mx-auto bg-white rounded-lg  overflow-hidden min-w-[700px]">
+        <div className="mt-5  mx-auto bg-white rounded-lg  overflow-hidden lg:min-w-[500px] xl:min-w-[700px]">
             <div className="p-4 flex gap-4 items-center">
                 <img src={profile} className='w-16 h-16 rounded-full' alt='profile' />
                 <div>

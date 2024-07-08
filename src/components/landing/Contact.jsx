@@ -3,11 +3,11 @@ import Input from '../ui/Input'
 
 const Contact = () => {
     return (
-        <div className='bg-[#161C2D] text-white h-[60vh]'>
+        <div className='bg-[#161C2D] text-white p-6 sm:h-[60vh] -my-10'>
             <div className='max-w-6xl h-full mx-auto'>
 
-                <div className='flex justify-between items-center h-full'>
-                    <div className='flex flex-col gap-4 w-[500px] '>
+                <div className='flex flex-col gap-20 sm:flex-row justify-between items-center h-full'>
+                    <div className='flex flex-col gap-4 sm:w-[500px] '>
 
                         <h4>
                             Get a free consultancy from our expert right now!
@@ -15,8 +15,6 @@ const Contact = () => {
                         <p>
                             With lots of unique blocks, you can easily build a page without coding. Build your next landing page so quickly with Albino.
                         </p>
-
-
 
                     </div>
                     <div className=''>

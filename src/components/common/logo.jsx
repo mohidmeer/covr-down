@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 const Logo = () => {
     return (
         <NavLink>
-            <img src={logoImg} alt='' className='w-[200px] brightness-0 grayscale-0' />
+            <img src={logoImg} alt='' className='w-[150px] sm:w-[200px] brightness-0 grayscale-0' />
         </NavLink>
     )
 }

@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom'
 
 const Services = () => {
     return (
-        <div className='max-w-6xl  mx-auto flex flex-col gap-20 relative'>
+        <div className='max-w-6xl  mx-auto flex flex-col gap-20 relative p-6'>
             <div className='gradient-1  p-10 rounded-full h-32 w-32 absolute top-10 -z-10 blur-3xl ' />
             <div className='max-w-4xl mx-auto flex flex-col gap-8 text-center'>
                 <p className='subtitle uppercase'>
@@ -25,7 +25,7 @@ const Services = () => {
                     At CovrDown, we believe in the power of knowledge.  Our mission is to provide our clients with the best subject matter experts in the industry to give them the tools they need to succeed. We use a blend of conventional and unconventional processes to ensure that we can accomplish a truly secure environment.
                 </p>
             </div>
-            <div className='grid grid-cols-2 gap-10  text-white '>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-10  text-white  '>
 
                 <div className='w-full h-[400px]  flex items-center justify-center relative'>
                     <img src={serviceImg} className='object-cover w-full h-full -z-10  brightness-50  rounded-2xl' alt='' />
@@ -85,7 +85,7 @@ const Services = () => {
 
             </div>
 
-            <div className='flex gap-2 relative'>
+            <div className='flex-col flex  md:flex-row gap-2 relative '>
                 <div className='bg-gradient-to-r from-primary via-primary to-yellow-600  p-10 rounded-full h-32 w-32 absolute top-0 -z-10 blur-3xl' />
                 <div className='flex-col gap-6 flex flex-1 justify-center  '>
                     <h4 className='leading-tight '>
@@ -115,7 +115,7 @@ const Services = () => {
 
 
             </div>
-            <div className='flex gap-2'>
+            <div className='flex flex-col sm:flex-row gap-2'>
                 <div className='flex-col gap-6 flex flex-1 justify-center   '>
                     <h4 className='leading-tight '>
                             Why choose us?
@@ -153,8 +153,8 @@ const Services = () => {
                 </div>
                 <div className='flex-1 relative'>
                     <img src={why} alt='' />
-                    <img className='absolute bottom-0 -left-20 ' src={quality} alt='' />
-                    <img src={quality1} className='absolute top-[300px] -right-32 ' alt='' />
+                    <img className='w-72    absolute bottom-0 -left-20 ' src={quality} alt='' />
+                    <img src={quality1} className='w-72 absolute top-[300px] -right-20 sm:-right-32 ' alt='' />
 
                 </div>
 

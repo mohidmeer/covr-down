@@ -11,29 +11,29 @@ html {
 
 h1{
 
-  @apply text-[64px] font-[600]
+  @apply   text-[52px]   sm:text-[64px] font-[600]
 
 }
 
 h2{
 
-  @apply text-[48px] font-[600]
+  @apply  text-[40px]   sm:text-[48px] font-[600]
 
 }
 
 h3{
 
-  @apply text-[40px] font-[600]
+  @apply text-[32px]  sm:text-[40px] font-[600]
 
 }
 h4{
 
-  @apply text-[36px] font-[600]
+  @apply text-[24px] sm:text-[36px] font-[600]
 
 }
 h5{
 
-  @apply text-[32px] font-[600]
+  @apply  text-[18px] sm:text-[32px] font-[600]
 
 }
 h6{

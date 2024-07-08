@@ -8,10 +8,10 @@ import { VscSettings } from "react-icons/vsc";
 
 const ContentManagement = () => {
     return (
-        <div className='h-screen flex flex-col gap-4 w-full'>
+        <div className='h-screen flex flex-col gap-4 w-full overflow-hidden'>
             <div className=''>
                 <TabGroup>
-                    <TabList className={'flex gap-6 font-semibold '}>
+                    <TabList className={'flex flex-row flex-wrap sm:flex-row gap-6 font-semibold '}>
                         <Tab className={'data-[selected]:text-primary data-[selected]:border-primary border-b-2 border-transparent  outline-none'}>Feed</Tab>
                         <Tab className={'data-[selected]:text-primary data-[selected]:border-primary border-b-2 border-transparent  outline-none'}>News</Tab>
                         <Tab className={'data-[selected]:text-primary data-[selected]:border-primary border-b-2 border-transparent  outline-none'}>Alert</Tab>
@@ -119,8 +119,8 @@ function Feed() {
         ];
 
     return (
-        <div className='mt-10'>
-            <div className="overflow-x-auto rounded-xl">
+        <div className='mt-10 overflow-x-auto rounded-xl relative max-w-4xl'>
+ 
                 <table className="w-full text-sm text-left whitespace-nowrap">
                     <thead className="text-xs uppercase bg-gray-100 rounded-md">
                         <tr>
@@ -171,7 +171,7 @@ function Feed() {
                     </tbody>
                 </table>
             </div>
-        </div>
+   
     )
 }
 

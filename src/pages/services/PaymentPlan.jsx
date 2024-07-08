@@ -31,7 +31,7 @@ const PaymentPlan = () => {
 
           </button>
         </div>
-        <div className='p-6 shadow-2xl flex flex-col justify-center items-center rounded-2xl bg-primary text-white h-[500px] -mt-28    '>
+        <div className='p-6 shadow-2xl flex flex-col justify-center items-center rounded-2xl bg-primary text-white h-[500px] md:-mt-28    '>
           <p>Your plan</p>
           <h5>Silver</h5>
           <ul className='flex flex-col gap-2 pl-4 mt-5'>

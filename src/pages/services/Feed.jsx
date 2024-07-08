@@ -7,12 +7,12 @@ const Feed = () => {
   return (
     <> 
     <div className='flex flex-col gap-4 w-full'>
-            <div className='flex justify-between  overflow-hidden items-center   '>
+            <div className='flex flex-wrap justify-between  overflow-hidden items-center   '>
                 <h5>Feed</h5>
-                <div className='w-1/3 ml-auto'>
+                <div className='sm:w-1/3 w-full ml-auto'>
                     <Input name={'Search'} placeholder="Search for user or keyword" />
                 </div>
-                <button className='btn '>
+                <button className='btn sm:w-fit w-full '>
                     Add Keyword
                 </button>
             </div>

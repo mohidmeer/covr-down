@@ -82,10 +82,11 @@ const ManagerLayout = () => {
         }
     
       ]
+    
     return (
         <div>
             <NavBar />
-            <main  className="container mx-auto flex gap-10 mt-20">
+            <main  className="container mx-auto flex gap-6 sm:gap-10 mt-20">
                 <SideBar Menu={Menu} />
                 <Outlet/>
             </main>

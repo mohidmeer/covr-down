@@ -5,7 +5,7 @@ import profile from '../../assets/img/profilepage.png'
 const Testimonials = () => {
   return (
     <div className='bg-primary text-white'>
-        <div className='h-[60vh] flex flex-col gap-6 justify-center items-center max-w-3xl mx-auto text-center'>
+        <div className='h-[60vh] flex flex-col gap-6 justify-center items-center max-w-3xl mx-auto text-center p-6'>
           <p className='subtitle uppercase text-success'>
             Testimonials
           </p>

@@ -10,7 +10,7 @@ const Footer = () => {
     <footer>
       <div className='bg-[#161C2D] h-[300px] flex flex-col justify-center items-center text-white '>
 
-        <div className='flex justify-between items-center gap-10'>
+        <div className='flex flex-col sm:flex-row justify-between items-center gap-10'>
           <div>
             <h4>Ready to Manage your Employees</h4>
             <p className='mt-2'>Get news of your area and weather alert on your finger tips, Control your employees with geofencing feature.</p>
@@ -22,11 +22,11 @@ const Footer = () => {
         </div>
 
       </div>
-      <div className='p-10 bg-primary '>
+      <div className='p-2 sm:p-10 bg-primary '>
 
-        <div className='flex justify-between max-w-7xl mx-auto'>
+        <div className='flex justify-between flex-wrap max-w-7xl mx-auto'>
           <Logo />
-          <div className='grid grid-cols-3 gap-10'>
+          <div className='grid grid-cols-2 sm:grid-cols-3 gap-10 sm:mt-0 mt-10'>
 
             <ul className='flex flex-col gap-4'>
               <p className='text-white'>Product </p>

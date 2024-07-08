@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom"
 import logo from '../assets/img/logo.png';
-import { MdArrowForward } from "react-icons/md";
+import { MdArrowForward, MdClose, MdMenu } from "react-icons/md";
 
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 
@@ -15,19 +15,20 @@ const NavBar = () => {
 
     const [user, setUser] = useState(true);
 
+    useEffect(() => { }, [user]);
 
 
-    useEffect(() => { }, [user])
 
     return (
         <div className='mx-auto container mt-[40px]   ' >
             <nav className='flex justify-between  items-center p-2 '>
-                <div className="">
+                <div className=" flex-shrink-0">
                     <img src={logo} alt="" className="brightness-0 w-40  " />
 
                 </div>
-                <div className=''>
-                    <ul className='flex gap-8'>
+                <MobileMenu />
+                <div className='hidden sm:block'>
+                    <ul className='flex flex-row sm:gap-3   md:gap-4 lg:gap-6 xl:gap-8  text-nowrap overflow-hidden'>
                         <li className="cursor-pointer group " >
                             <p className="nav-link">Pages</p>
                             <Pages />
@@ -51,21 +52,23 @@ const NavBar = () => {
                     </ul>
                 </div>
 
-                {
-                    user ?
-                        <div className="flex gap-4  items-center justify-center">
-                            <Profile />
-                        </div>
-                        :
-                        <div className="flex gap-4  items-center justify-center">
-                            <Link to={"/login"} onClick={() => { setUser(true) }} className="nav-link">
-                                Login
-                            </Link>
-                            <Link className="btn" to={"/login"}>
-                                Register
-                            </Link>
-                        </div>
-                }
+                <div className=" hidden sm:block">
+                    {
+                        user ?
+                            <div className="sm:flex gap-4  items-center justify-center ">
+                                <Profile />
+                            </div>
+                            :
+                            <div className="flex gap-4  items-center justify-center">
+                                <Link to={"/login"} onClick={() => { setUser(true) }} className="nav-link">
+                                    Login
+                                </Link>
+                                <Link className="btn" to={"/login"}>
+                                    Register
+                                </Link>
+                            </div>
+                    }
+                </div>
             </nav>
         </div>
     )
@@ -422,3 +425,60 @@ function Pages() {
 
 //     )
 // }
+
+
+
+function MobileMenu() {
+
+    const [open, setOpen] = useState(false);
+    return (
+
+        <>
+
+            <div className="absolute top-18 right-6 z-20 cursor-pointer sm:hidden ">
+                {
+
+                    open ?
+
+                    <MdClose size={24} className="" onClick={() => { setOpen(!open) }} />
+                    :
+                    <MdMenu size={24} className="" onClick={() => { setOpen(!open) }} />
+
+                }
+            </div>
+
+
+
+            <div className={`absolute  w-full top-10 z-10 h-0 ${open && '!h-full' } overflow-hidden transition-all duration-300 `}>
+                
+
+                <ul className='gap-8 flex flex-col   text-nowrap overflow-hidden bg-white w-full pb-10'>
+                    {/* <li className="cursor-pointer group " >
+                            <p className="nav-link">Pages</p>
+                            <Pages />
+                        </li> */}
+                    <li className="nav-link">
+                        <NavLink to="/">Home</NavLink>
+                    </li>
+                    <li className="nav-link">
+                        <NavLink to="/">Services</NavLink>
+                    </li>
+                    <li className="nav-link">
+                        <NavLink to="/">Patnership</NavLink>
+                    </li>
+                    <li className="nav-link">
+                        <NavLink to="/">Contact Us</NavLink>
+                    </li>
+                    <li className="nav-link">
+                        <NavLink to="/">About Us</NavLink>
+                    </li>
+
+                </ul>
+            </div>
+
+
+        </>
+
+
+    );
+}

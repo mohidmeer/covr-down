@@ -25,7 +25,7 @@ const Hero = () => {
                 GET STARTED 
             </NavLink>
 
-            <div>
+            <div className=''>
                 <div className='mb-10 ml-20'>
                     <img src={heroArt} alt='' />
 
@@ -37,7 +37,7 @@ const Hero = () => {
 
         </div>
         
-        <div className='flex-1 flex items-center justify-center mt-32'>
+        <div className='flex-1 hidden sm:flex items-center justify-center mt-32'>
 
 
             <img src={heroImg} alt='' className='w-[560px] '/>
