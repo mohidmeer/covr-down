@@ -9,13 +9,13 @@ import video from '../../assets/file.mp4'
 const Hero = () => {
     return (
         <div className='relative p-4'>
-            <video class="absolute top-0 left-0 object-cover w-full h-full -z-50 "
+{/*             <video class="absolute top-0 left-0 object-cover w-full h-full -z-50 "
                 autoPlay
                 loop
                 muted>
                 <source src={video} type="video/mp4" />
             </video>
-
+ */}
 
             <div className='flex items-center h-[80vh] container mx-auto p-8 relative overflow-hidden realtive '>
 
